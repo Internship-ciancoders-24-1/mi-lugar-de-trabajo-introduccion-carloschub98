@@ -1,4 +1,6 @@
-
+let string1 = '4-7+8+9/2*3';
+let resultado = calcular(string1);
+console.log(resultado);
 
 function calcular(cadena) {
     let validaciones = validadores(cadena);
@@ -56,7 +58,9 @@ function operarRestaYSuma(cadena) {
 
         let resultadoOperacion;
 
-        if (operador === '+') {
+        if (operador === '+') {const string1 = '4-7+8+9/2*3';
+        const resultado = calcular(string1);
+        console.log(resultado);
             resultadoOperacion = operando1 + operando2;
         } else if (operador === '-') {
             resultadoOperacion = operando1 - operando2;
@@ -86,7 +90,6 @@ function validadores(cadena) {
         bandera=true;
     }
 
-    //Respuesta
     if (bandera==false) {
         return [{
             "fallo": false,
@@ -97,8 +100,3 @@ function validadores(cadena) {
         return validaciones;
     }
 }
-
-
-const string1 = 'sssssssssssssssssssssssssssssssssssssssssssssssss';
-const resultado = calcular(string1);
-console.log(resultado);
