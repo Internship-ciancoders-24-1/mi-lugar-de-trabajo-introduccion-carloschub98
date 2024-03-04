@@ -1,15 +1,24 @@
 # Solución de problema
 
 ## Validaciones
-    - Las validaciones estan agrupadas mediante una clase, se llama Validador
+    - Las validaciones estan agrupadas mediante una clase llamada "Validador"
     - Tiene un metodo llamado validar, el cual cumple las siguientes funciones:
         - Validar que la cadena no este vacio
         - Validar que no exceda de 20 caracteres
+        - Validar que la cadena sea una expresión matematica válida
         - En caso de existir errores muestra los que encuentra
 
 ## Operaciones
-    - Se tiene una clase que realiza las operaciones, esta clase se llama Operaciones
+    - Se tiene una clase que realiza las operaciones, esta clase se llama "Operaciones"
     - En la clase Operaciones estan todos los metodos de raiz cuadrada, potencia, division, multiplicacion, suma y resta.
+    - Los simbolos utilizados para las operaciones son:
+        - Agrupación: ()
+        - Raiz cuadrada: q
+        - Potencia: ^
+        - División: /
+        - Multipliación: *
+        - Resta: -
+        - Suma: +
     - Para el calculo de las operaciones se toma en cuenta la jerarquia de las operaciones
     - Primero evaluamos si existe simbolo de agrupamiento que son los parentesis, en caso de existir los opera uno por uno. 
     - Cada expresion agrupada efectua los calculos respectivos y devuelve una cadena ya sin simbolos de agrupación.
