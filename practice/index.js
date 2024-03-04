@@ -1,4 +1,9 @@
 class Validador {
+    validarExpresionMatematica(cadena) {
+        const regex = /^-?(\d+(\.\d+)?|q\d+(\.\d+)?|\((?:-?\d+(\.\d+)?|q\d+(\.\d+)?|[+\-*/^])+\))(?:[+\-*/^](-?\d+(\.\d+)?|q\d+(\.\d+)?|\((?:-?\d+(\.\d+)?|q\d+(\.\d+)?|[+\-*/^])+\)))*$/;
+        return regex.test(cadena);
+    }
+
     validar(cadena) {
         let validaciones = [];
         let bandera = false;
@@ -15,6 +20,15 @@ class Validador {
             validaciones.push({
                 "fallo": true,
                 "error": "No pueden ser más de 20 caracteres"
+            });
+            bandera = true;
+        }
+
+        let expresionMatematica = this.validarExpresionMatematica(cadena);
+        if (!expresionMatematica) {
+            validaciones.push({
+                "fallo": true,
+                "error": "Debe enviar al menos una expresión matemática válida, revise su expresión"
             });
             bandera = true;
         }
